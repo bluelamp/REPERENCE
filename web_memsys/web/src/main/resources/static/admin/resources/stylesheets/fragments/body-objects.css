@@ -1,0 +1,107 @@
+div.object-item.frame {
+    background-color: #2f2f2f;
+    box-shadow: 0 0 0.5rem 0.0625rem #0f1930;
+    padding: 0;
+}
+
+div.object-item.button {
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+    border-radius: 9999px;
+}
+div.object-item.button:hover {
+    filter:brightness(1.2);
+}
+div.object-item.button:active {
+    filter:brightness(0.8);
+}
+
+div.object-item.page-number-button {
+    cursor:pointer;
+    font-weight: lighter;
+    color: #aaa;
+    padding: .5rem;
+    margin: 0 .5rem;
+}
+div.object-item.page-number-button:hover {
+    font-weight: 300;
+}
+div.object-item.page-number-button.current {
+    font-weight: bold;
+    color: #fff;
+    cursor: default;
+}
+
+div.object-item.cover {
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+}
+div.object-item.window {
+    pointer-events: none;
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -30%);
+    transition: all 300ms ease-in-out;
+}
+
+div.object-item.cover.visible {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.7);
+    pointer-events: fill;
+    opacity: 1;
+}
+
+div.object-item.window.visible {
+    background-color : rgba(255,255,255,.9);
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: .5rem;
+    z-index: 2;
+    opacity: 1;
+    transition: all 300ms ease-in-out;
+    pointer-events: all;
+}
+
+.green {
+    background-color: green;
+}
+.blue {
+    background-color: blue;
+}
+.skyblue {
+    background-color: skyblue;
+}
+.lightgreen {
+    background-color: lightgreen;
+}
+.red {
+    background-color: red;
+}
+.lightred {
+    background-color: rgb(241, 78, 78);
+}
+.yellow {
+    background-color: yellow;
+}
+.pink {
+    background-color: pink;
+}
+.orange {
+    background-color: orange;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}

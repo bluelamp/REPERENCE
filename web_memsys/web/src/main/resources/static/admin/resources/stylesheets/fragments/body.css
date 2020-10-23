@@ -1,0 +1,22 @@
+body, html {
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 0;
+    margin : 0;
+    width: 100vw;
+    height: 100vh;
+}
+body {
+    min-width: 1000px;
+}
+
+body > div.videoWrap {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+body > div.videoWrap > video {
+    /* width: 100%; */
+    height: 100%;
+    transform: scale(1.5);
+}

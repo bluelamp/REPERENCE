@@ -1,0 +1,31 @@
+@charset "UTF-8";
+@import "fragments/body-animation.css";
+@import "fragments/body-item.login-container.css";
+@import "fragments/body.css";
+@import "fragments/body-objects.css";
+@import "fragments/body-frame.css";
+@import "fragments/div.content.counter.css";
+@import "fragments/div.content.user-list.css";
+
+@media all and (max-width: 1000px) {
+    body > div.TopWrap {
+        height: 3rem;
+    }
+    body > div.middleWrap > aside.asideWrap {
+        left:-20rem;
+    }
+    body > div.middleWrap > div.mainWrap {
+        left: 0;
+    }
+    body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper {
+        display: grid;
+        grid-template-columns: 1fr;  /* 1fr : 1 fraction ratio */
+        grid-template-rows: repeat(4, 1fr);
+    }
+    body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper > div.counter-wrapper-item.counter  {
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    }
+    
+}

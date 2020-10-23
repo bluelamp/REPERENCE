@@ -1,0 +1,443 @@
+/* 초기화 */
+body, html, div, nav, fieldset, input, aside, p, a {
+    padding: 0;
+    margin: 0;
+}
+body, html {
+    width: 100%;
+    height: 100%;
+}
+
+/* 디자인 요소 */
+
+body {
+    background-color: black;
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow-x: hidden;
+    position: relative;
+}
+
+
+/*********************************************** topWrap ****************/
+body > div.topWrap {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    min-width: 1000px;
+    height: 5rem;
+    background-color: #86FC3A;
+    position: fixed;
+    top: 0; left: 0;
+    z-index:2;
+    overflow: hidden;
+}
+
+/* titleWrap */
+body > div.topWrap > div.titleWrap {
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 20rem;
+    background-color: rgba(127,127,127,.5);
+}
+body > div.topWrap > div.titleWrap > div.title-item.logo {
+    text-indent: -9999px;
+    padding: 2rem;
+    cursor: pointer;
+    background-image: url(/admin/resources/medias/logo.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+body > div.topWrap > div.titleWrap > div.title-item.title {
+    padding: 1rem 1rem 1rem .5rem;
+    color: #fff;
+    font-size: 1.75rem;
+    letter-spacing: -1.75pt;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+}
+body > div.topWrap > div.titleWrap > div.title-item.aside-button {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    right: -2.75rem;
+    width: 2.5rem; height: 2.5rem;
+}
+body > div.topWrap > div.titleWrap > div.title-item.aside-button > div.aside-button-item {
+    display: block;
+    width: 1.25rem;
+    height: .175rem;
+    text-indent: -9999px;
+    background-color: #fff;
+    position: relative;
+    right: -.6rem;
+    top: 1.1rem;
+}
+body > div.topWrap > div.titleWrap > div.title-item.aside-button > div.aside-button-item.aside-show::before {
+    content:"";
+    display: block;
+    width: 1.25rem;
+    height: .175rem;
+    background-color: #fff;
+    position: absolute;
+    top: -.5rem;
+    transform: rotateZ(0);
+    transition: 200ms;
+}
+body > div.topWrap > div.titleWrap > div.title-item.aside-button > div.aside-button-item.aside-show::after {
+    content:"";
+    display: block;
+    width: 1.25rem;
+    height: .175rem;
+    background-color: #fff;
+    position: absolute;
+    top: .5rem;
+    transform: rotateZ(0);
+    transition: 200ms;
+}
+body > div.topWrap > div.titleWrap > div.title-item.aside-button > div.aside-button-item::before {
+    content:"";
+    display: block;
+    width: .75rem;
+    height: .175rem;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    right:0;
+    transform-origin: right;
+    transform: rotateZ(45deg);
+    transition: 200ms;
+}
+body > div.topWrap > div.titleWrap > div.title-item.aside-button > div.aside-button-item::after {
+    content:"";
+    display: block;
+    width: .75rem;
+    height: .175rem;
+    background-color: #fff;
+    position: absolute;
+    top: -1px;
+    right:0;
+    transform-origin: right;
+    transform: rotateZ(-45deg);
+    transition: 200ms;
+}
+
+/* navWrap */
+body >  div.topWrap > nav.navWrap {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 20rem);
+    background-color: rgba(127,127,127,.5);
+}
+body >  div.topWrap > nav.navWrap > div.search-bar {
+    padding: 1rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    border: none;
+}
+body >  div.topWrap > nav.navWrap > div.search-bar > input.search-bar-item.input {
+    padding: 1.25rem 3rem 1.25rem 1.75rem;
+    width: 15rem;
+    border-radius: 9999px;
+    border: none;
+    outline: none;
+    font-size: 12pt;
+}
+body >  div.topWrap > nav.navWrap > div.search-bar > div.search-bar-item.button {
+    margin-left: -13%;
+    padding: 1.3rem;
+    cursor: pointer;
+    text-indent: -9999px;
+    background-color: #00b4d8;
+    background-image: url(/admin/resources/medias/login_button.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    width:0; height: 0;
+}
+body >  div.topWrap > nav.navWrap > div.search-bar > div.search-bar-item.button:hover {
+    filter: brightness(1.2);
+}
+body >  div.topWrap > nav.navWrap > div.nav-item.spaces {
+    flex-grow  : 1;
+}
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons > div.sidebutton-item.alarm {
+    background-image: url(/admin/resources/medias/alarm.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    padding: 2rem; width: 0; height: 0;
+    text-indent: -9999px;
+    cursor: pointer;
+    
+    transform-origin: center top;
+}
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons > div.sidebutton-item.alarm:hover {
+    animation: ringShake 500ms forwards ease-in-out;
+}
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons > div.sidebutton-item.chat {
+    background-image: url(/admin/resources/medias/chat.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    padding: 2rem; width: 0; height: 0;
+    text-indent: -9999px;
+    text-indent: -9999px;
+    cursor: pointer;
+    position: relative;
+}
+
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons > div.sidebutton-item.chat::before {
+    content:"";
+    position: absolute;
+    display: block;
+    right:.9rem;
+    top:.9rem;
+    padding: .3rem; width:0; height: 0;
+    border-radius: 50%;
+    background-color: lightgreen;
+}
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons > div.sidebutton-item.chat::after {
+    content:"";
+    position: absolute;
+    display: block;
+    right:.9rem;
+    top:.9rem;
+    padding: .3rem; width:0; height: 0;
+    border-radius: 50%;
+    background-color: lightgreen;
+    animation: spray 1s infinite forwards ease-in-out;
+}
+
+body >  div.topWrap > nav.navWrap > div.nav-item.sidebuttons > div.sidebutton-item.entire-menus {
+    background-image: url(/admin/resources/medias/entire_menu.png);
+    background-position: center center;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    padding: 2rem; width: 0; height: 0;
+    text-indent: -9999px;
+    text-indent: -9999px;
+    cursor: pointer;
+}
+
+
+/*********************************************** middleWrap ****************/
+body > div.middleWrap {
+    align-items: flex-start;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 5rem;
+    width: 100%;
+    height: 100%;
+    min-width: 1500px;
+}
+
+/* asideWrap */
+body > div.middleWrap > aside.asideWrap {
+    position: absolute;
+    left: 0; top: 0rem;
+    background-color: #00b4d8;
+    min-width: 20rem;
+    overflow: hidden;
+    transition: 300ms;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10rem;
+    width:0; height: 0;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile > div.profile-item.photo {
+    position: relative;
+    padding: 5rem;
+    width:0; height: 0;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile > div.profile-item.photo > div.profile-photo-item.outline {
+    position: absolute;
+    left: 0; top: 0;
+    padding: 5rem;
+    border-radius: 50%;
+    background: linear-gradient(90deg, rgba(214,240,255,1) 0%, rgba(142,246,180,1) 42%, rgba(0,212,255,1) 100%);
+    animation: profileCirculation 5s infinite forwards linear;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile > div.profile-item.photo > div.profile-photo-item.photo {
+    position: absolute;
+    left: .2rem; top: .2rem;
+    padding: 4.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile > div.profile-item.photo > div.profile-photo-item.photo > img {
+    position: absolute;
+    left: -.3rem; top: -2rem;
+    width: 10rem;
+    filter: saturate(0) contrast(150%);
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile > div.profile-item.name {
+    color: white;
+    font-size: 20pt;
+    padding: 2rem 1rem .5rem 1rem;
+    min-width: 50rem;
+    text-align: center;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.profile > div.profile-item.content {
+    color: rgb(167, 167, 167);
+    font-size: 18pt;
+    min-width: 12rem;
+    text-align: center;
+    letter-spacing: 50%;
+}
+
+/* menus */
+/* menus 공통 */
+body > div.middleWrap > aside.asideWrap >  div.aside-item.menus {
+    text-indent: 10%;
+    color: lightgray;
+}
+body > div.middleWrap > aside.asideWrap >  div.aside-item.menus > div.aside-menu-item {
+    cursor: pointer;
+    font-size: 14pt;
+    color: white;
+    padding: 1.5rem;
+    text-indent: 12%;
+}
+
+
+/* mainWrap */
+body > div.middleWrap > div.mainWrap  {
+    background-color: #000;
+    position: relative;
+    left: 10rem;
+    width: calc(100% - 20rem);
+}
+body > div.middleWrap > div.mainWrap > div.main-item {
+    margin-top: 5rem;
+}
+body > div.middleWrap > div.mainWrap > div.main-item > div.content-item {
+    left: 50%;
+    width: 80%;
+    position: relative;
+    transform: translate(-50%);
+}
+
+/* Alarm Wrap */
+body > div.alarmWrap {
+
+}
+
+/* 회원가입 창 */
+body > div.body-item.register > div.register-item.title {
+    padding: 1rem;
+    border-bottom: 1px solid #777;
+}
+body > div.body-item.register > div.register-item.content > form.content-item.form {
+    grid-template-rows: repeat(8, 1fr) .5fr .75fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+form.content-item.form > div.form-item.input-container{
+    padding: .75rem 2rem;
+}
+form.content-item.form > div.form-item.input-container > input {
+    padding: 0.75rem 1rem;
+    width: 25rem;
+    border: none;
+    outline: none;
+}
+form.content-item.form > div.form-item.checkbox-container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+form.content-item.form > div.form-item.checkbox-container > label {
+    margin-left: .5rem;
+    line-height: ;
+}
+form.content-item.form > div.form-item.select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form.content-item.form > div.form-item.select-container > select {
+    padding: 0.75rem 1rem;
+    width: 27.25rem;
+    border: none;
+    outline: none;
+}
+
+body > div.body-item.register > div.register-item.buttons {
+    padding: 1rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+/* 회원 수정 창 */
+body > div.body-item.modify > div.modify-item.title {
+    padding: 1rem;
+    border-bottom: 1px solid #777;
+}
+body > div.body-item.modify > div.modify-item.content > form.content-item.form {
+    grid-template-rows: repeat(8, 1fr) .5fr .75fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+form.content-item.form > div.form-item.input-container{
+    padding: .75rem 2rem;
+}
+form.content-item.form > div.form-item.input-container > input {
+    padding: 0.75rem 1rem;
+    width: 25rem;
+    border: none;
+    outline: none;
+}
+form.content-item.form > div.form-item.checkbox-container {
+    align-items: center;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 2rem;
+}
+form.content-item.form > div.form-item.checkbox-container > label {
+    margin-left: .5rem;
+    line-height: ;
+}
+form.content-item.form > div.form-item.select-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form.content-item.form > div.form-item.select-container > select {
+    padding: 0.75rem 1rem;
+    width: 27.25rem;
+    border: none;
+    outline: none;
+}
+
+body > div.body-item.modify > div.modify-item.buttons {
+    padding: 1rem 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}

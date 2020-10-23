@@ -1,0 +1,26 @@
+
+
+/* counter */
+body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);  /* 1fr : 1 fraction ratio */
+    grid-template-rows: 1fr;
+}
+body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper > div.counter-wrapper-item.counter {
+    background-color: #2f2f2f;
+    padding: 2rem 2rem;
+}
+body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper > div.counter-wrapper-item.counter:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper > div.counter-wrapper-item.counter > div.counter-item.title {
+    color: #80858a;
+    margin-left: 1rem;
+    font-size: 18pt;
+}
+body > div.middleWrap > div.mainWrap > div.main-item > div.content-item.counter-wrapper > div.counter-wrapper-item.counter > div.counter-item.value {
+    color: #fff;
+    font-size: 24pt;
+    padding: 2rem;
+}
